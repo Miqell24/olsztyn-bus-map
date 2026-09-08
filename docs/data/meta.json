@@ -1508,64 +1508,6 @@
       "rank": 1
     },
     {
-      "line": "N01",
-      "mode": "bus",
-      "color": "#000000",
-      "dirs": [
-        {
-          "dir": "Dworzec Główny",
-          "headsign": "Dworzec Główny",
-          "variants": 1,
-          "tripCount": 24,
-          "stops": 59,
-          "lengthKm": 26.11,
-          "stats": {
-            "observations": 59,
-            "matched": 59,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 5.658640179460616,
-            "roundaboutSegs": 36,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ],
-      "rank": 2
-    },
-    {
-      "line": "N02",
-      "mode": "bus",
-      "color": "#000000",
-      "dirs": [
-        {
-          "dir": "Dworzec Główny",
-          "headsign": "Dworzec Główny",
-          "variants": 1,
-          "tripCount": 24,
-          "stops": 79,
-          "lengthKm": 38.92,
-          "stats": {
-            "observations": 79,
-            "matched": 79,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 5.046122018866463,
-            "roundaboutSegs": 49,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ],
-      "rank": 2
-    },
-    {
       "line": "1",
       "mode": "tram",
       "color": "#d6212b",
@@ -1814,6 +1756,64 @@
         }
       ],
       "rank": 1
+    },
+    {
+      "line": "N01",
+      "mode": "bus",
+      "color": "#000000",
+      "dirs": [
+        {
+          "dir": "Dworzec Główny",
+          "headsign": "Dworzec Główny",
+          "variants": 1,
+          "tripCount": 24,
+          "stops": 59,
+          "lengthKm": 26.11,
+          "stats": {
+            "observations": 59,
+            "matched": 59,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 5.658640179460616,
+            "roundaboutSegs": 36,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "line": "N02",
+      "mode": "bus",
+      "color": "#000000",
+      "dirs": [
+        {
+          "dir": "Dworzec Główny",
+          "headsign": "Dworzec Główny",
+          "variants": 1,
+          "tripCount": 24,
+          "stops": 79,
+          "lengthKm": 38.92,
+          "stats": {
+            "observations": 79,
+            "matched": 79,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 5.046122018866463,
+            "roundaboutSegs": 49,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ],
+      "rank": 2
     }
   ]
 }
