@@ -1510,7 +1510,7 @@
     {
       "line": "N01",
       "mode": "bus",
-      "color": "#0059a9",
+      "color": "#000000",
       "dirs": [
         {
           "dir": "Dworzec Główny",
@@ -1539,7 +1539,7 @@
     {
       "line": "N02",
       "mode": "bus",
-      "color": "#0059a9",
+      "color": "#000000",
       "dirs": [
         {
           "dir": "Dworzec Główny",
