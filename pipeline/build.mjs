@@ -141,6 +141,16 @@ const tramSel = tramLines.filter((l) => l !== 'all');
 const LBL = new Map();
 const isRailTrunk = () => false;
 
+// ZDZiT names every pole "<stop> (<street>)" — "Dworzec Główny (Partyzantów)",
+// "Plac Roosevelta (Mochnackiego)" / "(Szrajbera)". The street is the feed's
+// own disambiguation, not the name on the pole or in the city's timetables,
+// so it goes (user 17.09.2026: "z nazw przystanków usunąć dodatki nazw ulic
+// w nawiasach"); poles of one stop on different streets become one name.
+// The feed of 1.09.2026 also numbers the pole before the street — "Redykajny 02
+// (Hozjusza)" — and the pole number goes with it (the stop label is one name
+// for all its poles).
+const ZDZIT_NAME = (n) => n.replace(/\s*\([^()]*\)\s*$/, '').replace(/\s+\d{2}$/, '');
+
 const MODES = [{
   mode: 'bus', label: 'buses', graphMode: 'road',
   // the city and the villages its lines reach — 2 × 2 tiles
@@ -148,7 +158,7 @@ const MODES = [{
   color: '#0059a9', colorDark: '#00294f',
   all: busAll, lines: busList.length ? busList : (busAll ? [] : ['103']),
   feeds: [
-    { tag: 'zdzit', dir: 'data/gtfs', routeTypes: ['3'],
+    { tag: 'zdzit', dir: 'data/gtfs', routeTypes: ['3'], nameFix: ZDZIT_NAME,
       skipRoute: (r) => /^Z-\d/.test((r.route_short_name || '').trim()),
       mapKey: (sn) => sn || null },
   ],
@@ -160,7 +170,7 @@ if (tramAll || tramSel.length) MODES.push({
   color: '#d6212b', colorDark: '#7c1116',
   all: tramAll, lines: tramAll ? [] : tramSel,
   feeds: [
-    { tag: 'zdzit', dir: 'data/gtfs', routeTypes: ['0'], mapKey: (sn) => sn || null },
+    { tag: 'zdzit', dir: 'data/gtfs', routeTypes: ['0'], nameFix: ZDZIT_NAME, mapKey: (sn) => sn || null },
   ],
 });
 

@@ -44,3 +44,7 @@ writes GeoJSON to `data/out/`; `npm run lines` adds the line-by-line view.
 
 Data: ZDZiT Olsztyn ·
 base map © OpenFreeMap / OpenMapTiles / OpenStreetMap contributors.
+
+## 17.09.2026 — requested fixes
+
+- **Stop names without the street.** ZDZiT names every pole `<stop> <pole no.> (<street>)` — both the street in brackets and the pole number go (`ZDZIT_NAME`), so poles of one stop share one name. Built on the ZDZiT feed of 1.09.2026 (line 307 is no longer in it).
